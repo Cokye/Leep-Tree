@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=, initial-scale=1.0">
+  <title>Pagina Central</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main2.css') }}">
+</head>
+<body> 
+<div id=sidebar> 
+  <div class="toggle-btn"> 
+     <span>&#9776;</span>
+  </div>
+  <ul>
+    <li>
+      <img src="{{ url_for('static', filename='css/Arbol.jpg') }}" alt="Logotipo" class="logo">
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/Tu_Arbol">Tu Arbol</a>
+    <li class="nav-item">
+      <a class="nav-link" href="/Desempeño">Desempeño</a>
+    <li class="nav-item" id="contenedor">
+      <a class="nav-link" href="javascript:abrir()">+Agregar Lista</a>
+    
+  </ul>
+</div>
+
+<div class="Texto_Centro" id="ventana">
+  <div id="cerrar"> <a href="javascript:cerrar()"> <img src="{{ url_for('static', filename='css/Equis.png') }}"> </a> </div>
+  Agregar Nueva Lista
+</div>
+
+<h1>Listas</h1>
+<h2>Listas Completadas</h2>
+
+
+<script src="{{ url_for('static', filename='css/main.js') }}" charset="utf-8"></script>
+
+
+<script>
+
+  function abrir(){
+    document.getElementById("ventana").style.display="block";
+  }
+
+  function cerrar(){
+    document.getElementById("ventana").style.display="none";
+  }
+</script>
+</body>
+</html>
